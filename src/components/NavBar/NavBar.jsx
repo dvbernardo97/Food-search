@@ -1,29 +1,40 @@
 import { Link } from 'react-router-dom';
 import * as userService from '../../utilities/users-service';
+import  Nav  from 'react-bootstrap/Nav';
+import SignUpForm from '../SignUpForm/SignUpForm';
 
-export default function NavBar({ user, setUser }) {
+export default function NavBar() {
 
-  // function handleLogOut() {
-  //   userService.logOut();
-  //   setUser(null);
-  // }
+    return (
+      <Nav defaultActiveKey="/" as="ul">
+        <Nav.Item as="li">
+          <Nav.Link href="/">Write a review</Nav.Link>
+        </Nav.Item>
+        <Nav.Item as="li">
+          <Nav.Link eventKey="link-1">Events</Nav.Link>
+        </Nav.Item>
+        <Nav.Item as="li">
+          <Nav.Link eventKey="link-2">Login</Nav.Link>
+        </Nav.Item>
+        <Nav.Item as="li">
+          <Nav.Link eventKey={<SignUpForm />}>Sign up</Nav.Link>
+        </Nav.Item>
+      </Nav>
+    );
+  }
 
-  return (
-    <nav>
-      <div>
-        <p>Write a review</p>
-        <p>Events</p>
-        <p>Login</p>
-        <button className='button'>Sign Up</button>
-      </div>
-    </nav>
-  );
-}
 
-{/* <Link to='/orders'>Order History</Link>
-&nbsp; | &nbsp;
-<Link to='/orders/new'>New Order</Link>
-&nbsp; | &nbsp;
-Welcome, {user.name}
-&nbsp; | &nbsp;
-<Link to='' onClick={handleLogOut}>Log Out</Link> */}
+  
+  
+//   return (
+//     <nav>
+//       <div>
+//         <p>Write a review</p>
+//         <p>Events</p>
+//         <p>Login</p>
+//         <button className='button'>Sign Up</button>
+//       </div>
+//     </nav>
+//   );
+// }
+
