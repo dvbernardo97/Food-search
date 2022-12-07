@@ -3,8 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import { getUser } from '../../utilities/users-service';
 import NavBar from '../../components/NavBar/NavBar';
 // import './App.css';
-import SearchBar from '../../components/SearchBar/SearchBar';
-import { SearchSuggestions } from '../../components/SearchBar/SearchSuggestions';
+
 import Search from '../../components/SearchBar/Search';
 import LandingPage from '../../components/LandingPage/LandingPage';
 
